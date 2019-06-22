@@ -38,10 +38,7 @@ class RxSwiftViewController: UIViewController {
     
     @IBAction func moveBeforeView(_ sender: Any) {
         // ViewControllerに繊維
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController: UIViewController = storyboard.instantiateViewController(withIdentifier: "Main")
-        viewController.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
-        self.present(viewController, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
