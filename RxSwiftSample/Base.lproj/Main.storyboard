@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--通常のログインバリデーション-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="RxSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ログインIDを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iNb-A9-edm">
+                                <rect key="frame" x="24" y="164" width="366" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaB-pK-dXr">
+                                <rect key="frame" x="24" y="218" width="61" height="24"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワードを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Okq-Hq-HNn">
+                                <rect key="frame" x="24" y="266" width="366" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsG-BT-KCv">
+                                <rect key="frame" x="57" y="320" width="300" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="FvW-z5-3QH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="ログイン(RxSwift版へ！)"/>
+                                <connections>
+                                    <action selector="moveNextView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="22A-pN-gF8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通常のログインバリデーション" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMv-Tn-Q7y">
+                                <rect key="frame" x="40" y="68" width="334" height="24"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmS-bu-ATY">
+                                <rect key="frame" x="24" y="116" width="23.5" height="24"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iNb-A9-edm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="0vo-py-vr3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iNb-A9-edm" secondAttribute="trailing" constant="24" id="HLO-dY-lkh"/>
+                            <constraint firstItem="QsG-BT-KCv" firstAttribute="top" secondItem="Okq-Hq-HNn" secondAttribute="bottom" constant="24" id="ORK-Qy-zFb"/>
+                            <constraint firstItem="iNb-A9-edm" firstAttribute="top" secondItem="NmS-bu-ATY" secondAttribute="bottom" constant="24" id="PF3-e0-kvR"/>
+                            <constraint firstItem="uaB-pK-dXr" firstAttribute="top" secondItem="iNb-A9-edm" secondAttribute="bottom" constant="24" id="SZb-0N-Ku5"/>
+                            <constraint firstItem="Okq-Hq-HNn" firstAttribute="top" secondItem="uaB-pK-dXr" secondAttribute="bottom" constant="24" id="UYD-Op-Lic"/>
+                            <constraint firstItem="NmS-bu-ATY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Ugb-Dm-lYk"/>
+                            <constraint firstItem="rMv-Tn-Q7y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V7e-Ga-JsR"/>
+                            <constraint firstItem="QsG-BT-KCv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xtx-5S-dAR"/>
+                            <constraint firstItem="NmS-bu-ATY" firstAttribute="top" secondItem="rMv-Tn-Q7y" secondAttribute="bottom" constant="24" id="aOi-LT-9PT"/>
+                            <constraint firstItem="uaB-pK-dXr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="fdH-d4-yqa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Okq-Hq-HNn" secondAttribute="trailing" constant="24" id="lI6-lS-Okd"/>
+                            <constraint firstItem="rMv-Tn-Q7y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="lvG-CI-sCO"/>
+                            <constraint firstItem="Okq-Hq-HNn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="oag-sC-MkJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="通常のログインバリデーション" id="wpr-vE-Oqq"/>
+                    <connections>
+                        <outlet property="idTextField" destination="iNb-A9-edm" id="5n0-oL-2op"/>
+                        <outlet property="loginButton" destination="QsG-BT-KCv" id="tXG-x5-plM"/>
+                        <outlet property="passwordTextField" destination="Okq-Hq-HNn" id="tIM-dD-fkY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="755"/>
+        </scene>
+    </scenes>
+</document>
